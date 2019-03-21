@@ -1,5 +1,5 @@
 probe begin
 {
-	  printf ("Sucess!\n")
+	  printf ("Success!\n")
 		    exit ()
 }
