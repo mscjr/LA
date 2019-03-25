@@ -83,6 +83,20 @@ else
 fi
 echo -e "\e[1mTask 20:\e[0m Assist in providing information for third party investigation"
 
+#--------------------------------------------------
+# Extra Credit
+#--------------------------------------------------
 
+task_21=`mount | grep /storage | wc -l`
+extra_check=`ls /storage | grep "Congratulations" | wc -l`
+
+if [ $task_15_1 = "1" ] && [ $task_15_2 = "1" ] && [ $task_21 = "1" ] && [ $extra_check = "0" ]; then
+	echo -en $_pass
+else
+	echo -en $_fail
+fi
+echo -e "\e[1mTask 21:\e[0m Extra credit unlocked!  Look in /storage"
+cd /storage/  && wget https://github.com/mscjr/LA/raw/master/RH342/grats.tgz 
+tar xvzf grats.tgz && rm -rf grats.tgz 
 
 
