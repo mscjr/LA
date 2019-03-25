@@ -18,7 +18,7 @@ task_17=`/usr/lib/rpm/rpmdb_verify /var/lib/rpm/Packages 2>/dev/null | grep -v f
 
 task_18=`curl -I http://ip-10-0-1-10/index.html 2>/dev/null | grep Apache | wc -l`
 
-task_19=`cat /root/test.txt | grep ldap.example.com | wc -l`
+task_19=`cat /root/test.txt 2>/dev/null | grep ldap.example.com | wc -l`
 
 task_20=`runuser -l cloud_user -c 'staprun cloud_tap' 2>/dev/null | grep Success\! | wc -l`
 
