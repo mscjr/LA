@@ -21,7 +21,7 @@ task_10_3=`df -h | grep luks | grep 833M | wc -l`
 
 #
 task_11_1=`systemctl status pmcd | grep 'active (running)' | wc -l`
-task_11_2=`systemctl is-enabled pmcd | grep enabled | wc -l`
+task_11_2=`systemctl is-enabled pmcd 2>/dev/null | grep enabled | wc -l`
 
 echo -e "\e[1mRH342 PRACTICE EXAM:\e[0m HostB"
 echo -e "================================================================"
