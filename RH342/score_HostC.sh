@@ -11,7 +11,7 @@ _partial="[ \e[93mPARTIAL\e[0m ]\t"
 task_12=`ls -l /usr/bin/polling.sh | grep -v x | wc -l`
 
 
-task_13=`dig linuxacademy.com | grep "Got answer:" | wc -l`
+task_13=`dig linuxacademy.com 2>/dev/null | grep "Got answer:" | wc -l`
 
 #
 task_14=`echo 'welcome1' | smbclient -U cloud_user -L localhost | grep Home | wc -l`
