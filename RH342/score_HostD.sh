@@ -3,7 +3,7 @@
 # Verify environment
 verify=`ls /root/ | grep packet.cap | wc -l`
 if [ $verify = "1" ]; then
-	echo -e "HostD exam prep appears normal"
+	echo -e "\e[32mHostD exam prep appears normal\e[0m"
 fi
 
 # RH342 GRADING SCRIPT
