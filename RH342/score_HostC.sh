@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Verify environment
+verify=`cat /usr/bin/polling.sh | grep true | wc -l`
+if [ $verify = "1" ]; then
+	echo -e "HostC exam prep appears normal"
+fi
+
 # RH342 GRADING SCRIPT
 # HostC
 
