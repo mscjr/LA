@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# Verify environment
+verify=`cat /home/cloud_user/html/index.html | grep  "Success" | wc -l`
+if [ $verify = "1" ]; then
+	echo -e "HostA exam prep appears normal"
+fi
+
+
 # RH342 GRADING SCRIPT
 # HostA
 
