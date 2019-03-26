@@ -3,7 +3,7 @@
 # Verify environment
 verify=`cat /etc/systemd/system/pmlogger.service.d/dependency.conf | grep pmcd.service | tail -n1 | wc -l`
 if [ $verify = "1" ]; then
-	echo -e "HostB exam prep appears normal"
+	echo -e "\e[32mHostB exam prep appears normal\e[0m"
 fi
 
 
