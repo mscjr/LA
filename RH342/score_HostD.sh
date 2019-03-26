@@ -16,7 +16,8 @@ task_16_2=`cat /etc/rsyslog.conf | grep "@@ip-10-0-1-12:514" | wc -l`
 
 task_17=`/usr/lib/rpm/rpmdb_verify /var/lib/rpm/Packages 2>/dev/null | grep -v failed | wc -l`
 
-task_18=`curl -I http://ip-10-0-1-10/index.html 2>/dev/null | grep Apache | wc -l`
+task_18_1=`curl -I http://ip-10-0-1-10/index.html 2>/dev/null | grep Apache | wc -l`
+task_18_2=`cat /root/passwd.txt | grep mypaSSword | wc -l`
 
 task_19=`cat /root/test.txt 2>/dev/null | grep ldap.example.com | wc -l`
 
@@ -58,8 +59,10 @@ echo -e "\e[1mTask 17:\e[0m Troubleshoot RPM issues"
 #--------------------------------------------------
 # TASK 18
 #--------------------------------------------------
-if [ $task_18 = "1" ]; then
+if [ $task_18_1 = "1" ] && [ $task_18_2 = "1" ]; then
 	echo -en $_pass
+elif [ $task_18_1 = "1" ] || [ $task_18_2 = "1" ]; then
+	echo -en $_partial
 else
 	echo -en $_fail
 fi
