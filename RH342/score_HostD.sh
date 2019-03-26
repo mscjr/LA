@@ -88,7 +88,7 @@ echo -e "\e[1mTask 20:\e[0m Assist in providing information for third party inve
 #--------------------------------------------------
 
 task_21=`mount | grep /storage | wc -l`
-extra_check=`ls /storage | grep "Congratulations" | wc -l`
+extra_check=`lsblk | grep luks-vg_1-lv_1 | grep /storage | grep crypt | wc -l`
 
 if [ $task_15_1 = "1" ] && [ $task_15_2 = "1" ] && [ $task_21 = "1" ] && [ $extra_check = "0" ]; then
 	echo -en $_pass
