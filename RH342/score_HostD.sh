@@ -93,11 +93,10 @@ extra_check_3=`ls /storage/ | grep encrypted_vol_file | wc -l | grep 8  | wc -l`
 
 if [ $task_15_1 = "1" ] && [ $task_15_2 = "1" ] && [ $extra_check_1 = "1" ] && [ $extra_check_2 = "1" ] && [ $extra_check_3 = "1" ]; then
 	echo -en $_pass
-else
-	echo -en $_fail
+	echo -e "\e[1mTask 21:\e[0m Extra credit unlocked!  Look in /storage"
+	cd /storage/ && wget https://github.com/mscjr/LA/raw/master/RH342/grats.tgz 
+	tar xvzf grats.tgz && rm -rf grats.tgz 
 fi
-echo -e "\e[1mTask 21:\e[0m Extra credit unlocked!  Look in /storage"
-cd /storage/  && wget https://github.com/mscjr/LA/raw/master/RH342/grats.tgz 
-tar xvzf grats.tgz && rm -rf grats.tgz 
+
 
 
