@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Verify environment
+verify=`ls /root/ | grep packet.cap | wc -l`
+if [ $verify = "1" ]; then
+	echo -e "HostD exam prep appears normal"
+fi
+
 # RH342 GRADING SCRIPT
 # HostD
 
