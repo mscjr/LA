@@ -3,7 +3,7 @@
 # Verify environment
 verify=`cat /usr/bin/polling.sh | grep true | wc -l`
 if [ $verify = "1" ]; then
-	echo -e "HostC exam prep appears normal"
+	echo -e "\e[32mHostC exam prep appears normale[0m"
 fi
 
 # RH342 GRADING SCRIPT
