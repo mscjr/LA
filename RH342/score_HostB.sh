@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# Verify environment
+verify=`cat /etc/systemd/system/pmlogger.service.d/dependency.conf | grep pmcd.service | tail -n1 | wc -l`
+if [ $verify = "1" ]; then
+	echo -e "HostB exam prep appears normal"
+fi
+
+
 # RH342 GRADING SCRIPT
 # HostB
 
