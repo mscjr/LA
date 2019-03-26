@@ -87,10 +87,11 @@ echo -e "\e[1mTask 20:\e[0m Assist in providing information for third party inve
 # Extra Credit
 #--------------------------------------------------
 
-task_21=`mount | grep /storage | wc -l`
-extra_check=`lsblk | grep luks-vg_1-lv_1 | grep /storage | grep crypt | wc -l`
+extra_check_1=`mount | grep /storage | wc -l`
+extra_check_2=`lsblk | grep luks-vg_1-lv_1 | grep /storage | grep crypt | wc -l`
+extra_check_3=`ls /storage/ | grep encrypted_vol_file | wc -l | grep 8  | wc -l`
 
-if [ $task_15_1 = "1" ] && [ $task_15_2 = "1" ] && [ $task_21 = "1" ] && [ $extra_check = "0" ]; then
+if [ $task_15_1 = "1" ] && [ $task_15_2 = "1" ] && [ $extra_check_1 = "1" ] && [ $extra_check_2 = "1" ] && [ $extra_check_3 = "1" ]; then
 	echo -en $_pass
 else
 	echo -en $_fail
