@@ -23,7 +23,7 @@ task_16_2=`cat /etc/rsyslog.conf | grep "@@ip-10-0-1-12:514" | wc -l`
 task_17=`/usr/lib/rpm/rpmdb_verify /var/lib/rpm/Packages 2>/dev/null | grep -v failed | wc -l`
 
 task_18_1=`curl -I http://ip-10-0-1-10/index.html 2>/dev/null | grep Apache | wc -l`
-task_18_2=`cat /root/passwd.txt | grep mypaSSword | wc -l`
+task_18_2=`cat /root/passwd.txt 2>/dev/null | grep mypaSSword | wc -l`
 
 task_19=`cat /root/test.txt 2>/dev/null | grep ldap.example.com | wc -l`
 
