@@ -3,7 +3,7 @@
 # Verify environment
 verify=`cat /home/cloud_user/html/index.html | grep  "Success" | wc -l`
 if [ $verify = "1" ]; then
-	echo -e "HostA exam prep appears normal"
+	echo -e "\e[32mHostA exam prep appears normal\e[0m"
 fi
 
 
